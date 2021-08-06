@@ -1,12 +1,11 @@
-const isLogged= (state = false,action) => {
+const isLogged = (state = false, action) => {
+  switch (action.type) {
+    case 'SIGNIN':
+      return !state
 
-    switch(action.type) {
-        case "SIGNIN":
-        return !state;
-
-        default:
-            return state;
-    }
+    default:
+      return state
+  }
 }
 
-export default isLogged;
+export default isLogged
